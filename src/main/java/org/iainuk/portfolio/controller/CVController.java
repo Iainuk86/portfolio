@@ -15,8 +15,8 @@ import java.io.*;
 @Controller
 public class CVController {
 
-    @RequestMapping(value = "/viewcv")
-    public ResponseEntity<InputStreamResource> getTermsConditions() throws FileNotFoundException {
+    @RequestMapping(value="/viewcv")
+    public ResponseEntity<InputStreamResource> viewCV() throws FileNotFoundException {
 
         String filePath = "C:\\Users\\iainu\\IdeaProjects\\Portfolio\\src\\main\\resources\\";
         String fileName = "iain-mcintosh-cv.pdf";
@@ -33,7 +33,7 @@ public class CVController {
                 .body(resource);
     }
 
-    @RequestMapping(value = "/downloadcv", method = RequestMethod.GET)
+    @RequestMapping(value="/downloadcv", method=RequestMethod.GET)
     public StreamingResponseBody downloadCV(HttpServletResponse response) throws IOException {
 
         response.setContentType("text/html;charset=UTF-8");
