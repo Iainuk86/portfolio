@@ -96,7 +96,7 @@
                             <img class="img-fluid" th:src="@{/assets/img/moon.jpg}" alt="" />
                         </div>
                     </div>
-                    <h2 class="page-section-heading text-center text-uppercase text-darker mb-0">Coming soon</h2>
+                    <h2 class="page-section-heading text-center text-uppercase text-darker mb-0 mt-4">Coming soon</h2>
                     <!-- Icon Divider-->
                     <div class="divider-custom">
                         <div class="divider-custom-line"></div>
@@ -160,16 +160,16 @@
                         <div class="p-2">Maven + Gradle</div>
                         <div class="p-2">Data Structures and Algorithms</div>
                         <div class="p-2">MS Office</div>
-                        <div class="p-2">Native English speaker</div>
                     </div>
                     <div class="col-md-4 ml-auto flex-column">
                         <div class="p-2">Basics of:</div>
                         <div class="p-2">JavaScript</div>
                         <div class="p-2">Python</div>
                         <div class="p-2">React</div>
-                        <div class="p-2">Solidity</div>
-                        <div class="p-2">Kotlin</div>
                         <div class="p-2">PostgreSQL</div>
+                        <div class="p-2">Solidity</div>
+                        <div class="p-2">Godot Game Engine</div>
+                        <div class="p-2">Kotlin</div>
                         <div class="p-2">Design Patterns</div>
                     </div>
                 </div>
@@ -245,9 +245,11 @@
                 <div class="row">
                     <!-- Footer Location-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Location</h4>
+                        <h4 class="text-uppercase mb-4">Contact</h4>
+                        <p class="lead mb-0">Lewisham, Sydney</p>
+                        <p class="lead mb-0">iainuk@protonmail.com</p>
                         <p class="lead mb-0">
-                            Lewisham, Sydney
+                            <a th:href="@{tel:0458633414}">0458 633 414</a>
                         </p>
                     </div>
                     <!-- Footer Social Icons-->
@@ -349,10 +351,22 @@
                                         <source th:src="@{/assets/video/customer-list.m4v}" type="video/mp4" />
                                     </video>                                    <!-- Portfolio Modal - Text-->
                                     <p class="font-josefin mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
-                                        Close Window
-                                    </button>
+                                    <div class="d-flex justify-content-center font-josefin">
+                                        <div class="p-2">
+                                            <a th:href="@{https://github.com/Iainuk86/customer-tracker}">
+                                                <button class="btn btn-primary">
+                                                    <i class="fas fa-paper-plane fa-fw"></i>
+                                                    GitHub Repo
+                                                </button>
+                                            </a>
+                                        </div>
+                                        <div class="p-2">
+                                            <button class="btn btn-primary" data-dismiss="modal">
+                                                <i class="fas fa-times fa-fw"></i>
+                                                Close Window
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -384,10 +398,22 @@
                                         <source th:src="@{/assets/video/tide-calculator.m4v}" type="video/mp4" />
                                     </video>                                    <!-- Portfolio Modal - Text-->
                                     <p class="font-josefin mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
-                                        Close Window
-                                    </button>
+                                    <div class="d-flex justify-content-center font-josefin">
+                                        <div class="p-2">
+                                            <a th:href="@{https://github.com/Iainuk86/tide-calculator}">
+                                                <button class="btn btn-primary">
+                                                    <i class="fas fa-paper-plane fa-fw"></i>
+                                                    GitHub Repo
+                                                </button>
+                                            </a>
+                                        </div>
+                                        <div class="p-2">
+                                            <button class="btn btn-primary" data-dismiss="modal">
+                                                <i class="fas fa-times fa-fw"></i>
+                                                Close Window
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -407,7 +433,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-darker text-uppercase mb-0" id="portfolioModal4Label">Controller</h2>
+                                    <h2 class="portfolio-modal-title text-darker text-uppercase mb-0" id="portfolioModal4Label">Crypto-commerce</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -415,9 +441,9 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" th:src="@{/assets/img/portfolio/game.png}" alt="" />
+                                    <img class="img-fluid rounded mb-5" th:src="@{/assets/img/blockchain.png}" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-5">Simple Bootstrap e-commerce website where users can buy goods using Cryptocurrency.<br>Uses Smart Contracts written in Solidity and ran on a local Blockchain using Truffle Ganache.</p>
                                     <button class="btn btn-primary" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
@@ -441,7 +467,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-darker text-uppercase mb-0" id="portfolioModal5Label">Locked Safe</h2>
+                                    <h1 class="text-darker text-uppercase mb-0" id="portfolioModal5Label">Cryptocurrency Arbitrage</h1>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -449,9 +475,9 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" th:src="@{/assets/img/portfolio/safe.png}" alt="" />
+                                    <img class="img-fluid rounded mb-5" th:src="@{/assets/img/crypto.jpg}" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-5">An app that uses the CoinMarketCap Rest API to receive all of the latest Cryptocurrency prices, which are then ran through a self-implemented Bellman Ford algorithm.<br>If a negative cycle is detected by the algorithm, an opportunity for arbitrage is present. The result of exchanging $1,000 into the given currencies is then displayed to the user.</p>
                                     <button class="btn btn-primary" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
@@ -475,7 +501,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-darker text-uppercase mb-0" id="portfolioModal6Label">Submarine</h2>
+                                    <h2 class="portfolio-modal-title text-darker text-uppercase mb-0" id="portfolioModal6Label">Pip Bandito</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -483,9 +509,9 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" th:src="@{/assets/img/portfolio/submarine.png}" alt="" />
+                                    <img class="img-fluid rounded mb-5" th:src="@{/assets/img/desert.png}" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-5">A simple 2D side scroller game where the main character has to avoid incoming enemies.<br>Highly responsive and fluid gameplay is a must and will be built with the Godot game engine.</p>
                                     <button class="btn btn-primary" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
