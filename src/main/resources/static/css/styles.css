@@ -10103,12 +10103,7 @@ h3 {
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
   color: rgb(26, 108, 119);
 }
-#mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
-  color: #212529;
-}
-#mainNav .navbar-nav li.nav-item a.nav-link.active {
-  color: rgb(26, 108, 119);
-}
+
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.8rem;
@@ -10128,16 +10123,16 @@ h3 {
     margin-top: 0;
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
-    color: #212529;
+    color: #cecfde;
   }
-  #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
-    color: #212529;
+  #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
+    color: rgb(26, 108, 119);
   }
 
   #mainNav.navbar-shrink {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    background-color: #393943;
+    background-color: #40404f;
   }
 
   #mainNav.navbar-shrink .navbar-brand {
@@ -10149,6 +10144,7 @@ h3 {
     color: #cecfde;
   }
 }
+
 .masthead {
   padding-top: calc(6rem + 74px);
   padding-bottom: 6rem;
@@ -10279,7 +10275,7 @@ form .row:first-child .floating-label-form-group {
 .footer {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: #2c3e50;
+  background-color: #40404f;
   color: #fff;
 }
 

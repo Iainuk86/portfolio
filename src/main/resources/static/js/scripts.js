@@ -48,7 +48,6 @@
           $("#mainNav").addClass("navbar-shrink");
       } else {
           $("#mainNav").removeClass("navbar-shrink");
-          $("#mainNav .navbar-nav li.nav-item a.nav-link").removeClass("bg-light");
           $("#mainNav").addClass("bg-transparent");
       }
     };
@@ -67,6 +66,10 @@
         $(this).removeClass("floating-label-form-group-with-focus");
       });
     });
+
+    function submitForm() {
+
+    }
   
   })(jQuery); // End of use strict
   
