@@ -45,7 +45,6 @@
     var navbarCollapse = function() {
       if ($("#mainNav").offset().top > 150) {
           $("#mainNav").removeClass("bg-transparent");
-          $("#mainNav .navbar-nav li.nav-item a.nav-link").addClass("bg-light");
           $("#mainNav").addClass("navbar-shrink");
       } else {
           $("#mainNav").removeClass("navbar-shrink");

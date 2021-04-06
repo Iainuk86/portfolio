@@ -10144,6 +10144,10 @@ h3 {
     font-size: 1.5em;
     color: #cecfde;
   }
+
+  #mainNav.navbar-shrink li.nav-item a.nav-link {
+    color: #cecfde;
+  }
 }
 .masthead {
   padding-top: calc(6rem + 74px);
