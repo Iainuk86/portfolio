@@ -39,98 +39,123 @@
         </nav>
 
         <!-- Masthead-->
-        <header class="masthead bg-surf text-darker text-center">
-            <div class="container d-flex align-items-end flex-column">
-                <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar align-self-start mb-5" th:src="@{/assets/img/photo.jpg}" alt="Portrait" />
-                <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-2">Iain</h1>
-                <h1 class="masthead-heading text-uppercase mb-5">McIntosh</h1>
-                <!-- Masthead Subheading-->
-                <h2 class="masthead-subheading pt-md-2">Back End</h2>
-                <h2 class="masthead-subheading">Developer*</h2>
-                <p class="p-2 terms mb-2">For now</p>
+        <header class="masthead bg-black text-light text-right">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img class="masthead-avatar align-self-start" id="iain-photo" th:src="@{/assets/img/photo.jpg}" />
+                    </div>
+                    <div class="col-sm-9 align-self-end">
+                        <div class="container">
+                            <div class="animate one" id="iain">
+                                <span>I</span><span>A</span><span>I</span><span>N</span> &nbsp;
+                                <span>M</span><span>C</span><span>I</span><span>N</span><span>T</span><span>O</span><span>S</span><span>H</span>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="animate one" id="junior">
+                                <span>J</span><span>U</span><span>N</span><span>I</span><span>O</span><span>R</span> &nbsp;
+                                <span>D</span><span>E</span><span>V</span><span>E</span><span>L</span><span>O</span><span>P</span><span>E</span><span>R</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <a class="js-scroll-trigger" href="#projects">
+                        <div class="arrow bounce" id="arrows">
+                            <i class="fa fa-angle-double-down fa-2x"></i>
+                        </div>
+                    </a>
+                </div>
             </div>
         </header>
 
         <!-- Project Section-->
         <section class="page-section portfolio" id="projects">
             <div class="container">
-                <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-darker mb-0">Projects</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-terminal"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Portfolio Grid Items-->
-                <div class="row justify-content-center">
-                    <!-- Portfolio Item 1-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <h3 class="text-center">Cocktail Mate</h3>
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-code fa-2x"></i></div>
-                            </div>
-                            <img class="img-fluid" th:src="@{/assets/img/cocktails.jpg}" alt="" />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 2-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <h3 class="text-center">Customer Tracker</h3>
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-code fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" th:src="@{/assets/img/customers.jpg}" alt="" />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 3-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <h3 class="text-center">Tide Calculator</h3>
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-code fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" th:src="@{/assets/img/moon.jpg}" alt="" />
-                        </div>
-                    </div>
-                    <h2 class="page-section-heading text-center text-uppercase text-darker mb-0 mt-4">Coming soon</h2>
+                <div class="fade-on-scroll">
+                    <!-- Portfolio Section Heading-->
+                    <h2 class="page-section-heading text-center text-uppercase text-darker mb-0">Projects</h2>
                     <!-- Icon Divider-->
                     <div class="divider-custom">
                         <div class="divider-custom-line"></div>
                         <div class="divider-custom-icon"><i class="fas fa-terminal"></i></div>
                         <div class="divider-custom-line"></div>
                     </div>
-                    <!-- Portfolio Item 4-->
-                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                        <h3 class="text-center">Crypto-commerce</h3>
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-code fa-3x"></i></div>
+                    <!-- Portfolio Grid Items-->
+                    <div class="row justify-content-center">
+                        <!-- Portfolio Item 1-->
+                        <div class="col-md-6 col-lg-4 mb-5">
+                            <h3 class="text-center">Cocktail Mate</h3>
+                            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+                                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                    <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-code fa-2x"></i></div>
+                                </div>
+                                <img class="img-fluid" th:src="@{/assets/img/cocktails.jpg}" alt="" />
                             </div>
-                            <img class="img-fluid" th:src="@{/assets/img/blockchain.png}" alt="" />
+                        </div>
+                        <!-- Portfolio Item 2-->
+                        <div class="col-md-6 col-lg-4 mb-5">
+                            <h3 class="text-center">Customer Tracker</h3>
+                            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
+                                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                    <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-code fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" th:src="@{/assets/img/customers.jpg}" alt="" />
+                            </div>
+                        </div>
+                        <!-- Portfolio Item 3-->
+                        <div class="col-md-6 col-lg-4 mb-5">
+                            <h3 class="text-center">Tide Calculator</h3>
+                            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
+                                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                    <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-code fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" th:src="@{/assets/img/moon.jpg}" alt="" />
+                            </div>
                         </div>
                     </div>
-                    <!-- Portfolio Item 5-->
-                    <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
-                        <h3 class="text-center">Cryptocurrency Arbitrage</h3>
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-code fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" th:src="@{/assets/img/crypto.jpg}" alt="" />
+                </div>
+                <div>
+                    <div class="fade-on-scroll">
+                        <h2 class="page-section-heading text-center text-uppercase text-darker mb-0 mt-4">Coming soon</h2>
+                        <!-- Icon Divider-->
+                        <div class="divider-custom">
+                            <div class="divider-custom-line"></div>
+                            <div class="divider-custom-icon"><i class="fas fa-terminal"></i></div>
+                            <div class="divider-custom-line"></div>
                         </div>
                     </div>
-                    <!-- Portfolio Item 6-->
-                    <div class="col-md-6 col-lg-4">
-                        <h3 class="text-center">Pip Bandito</h3>
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-code fa-3x"></i></div>
+                    <div class="row justify-content-center fade-on-scroll">
+                        <!-- Portfolio Item 4-->
+                        <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                            <h3 class="text-center">Crypto-commerce</h3>
+                            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
+                                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                    <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-code fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" th:src="@{/assets/img/blockchain.png}" alt="" />
                             </div>
-                            <img class="img-fluid" th:src="@{/assets/img/desert.png}" alt="" />
+                        </div>
+                        <!-- Portfolio Item 5-->
+                        <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+                            <h3 class="text-center">Cryptocurrency Arbitrage</h3>
+                            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
+                                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                    <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-code fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" th:src="@{/assets/img/crypto.jpg}" alt="" />
+                            </div>
+                        </div>
+                        <!-- Portfolio Item 6-->
+                        <div class="col-md-6 col-lg-4">
+                            <h3 class="text-center">Pip Bandito</h3>
+                            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
+                                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                    <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-code fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" th:src="@{/assets/img/desert.png}" alt="" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -148,29 +173,34 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- About Section Content-->
-                <div class="row">
+                <div class="row swing">
                     <div class="col-md-4 ml-auto flex-column offset-4">
-                        <div class="p-2">Java OOP</div>
-                        <div class="p-2">Spring Boot</div>
-                        <div class="p-2">MySQL</div>
-                        <div class="p-2">HTML</div>
-                        <div class="p-2">CSS</div>
-                        <div class="p-2">Rest APIs + JSON</div>
-                        <div class="p-2">Git</div>
-                        <div class="p-2">Maven + Gradle</div>
-                        <div class="p-2">Data Structures and Algorithms</div>
-                        <div class="p-2">MS Office</div>
+                        <button class="glow-on-hover" id="show-working-list" type="button">Working knowledge of ...</button>
+                        <ul class="skill-list" id="working-knowledge-list">
+                            <li>Java OOP</li>
+                            <li>Spring Boot</li>
+                            <li>MySQL</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Rest APIs + JSON</li>
+                            <li>Git</li>
+                            <li>Maven + Gradle</li>
+                            <li>Data Structures and Algorithms</li>
+                            <li>MS Office</li>
+                        </ul>
                     </div>
                     <div class="col-md-4 ml-auto flex-column">
-                        <div class="p-2">Basics of:</div>
-                        <div class="p-2">JavaScript</div>
-                        <div class="p-2">Python</div>
-                        <div class="p-2">React</div>
-                        <div class="p-2">PostgreSQL</div>
-                        <div class="p-2">Solidity</div>
-                        <div class="p-2">Godot Game Engine</div>
-                        <div class="p-2">Kotlin</div>
-                        <div class="p-2">Design Patterns</div>
+                        <button class="glow-on-hover" id="show-basics-list" type="button">Basics of ...</button>
+                        <ul class="skill-list" id="basics-list">
+                            <li>JavaScript</li>
+                            <li>Python</li>
+                            <li>React</li>
+                            <li>PostgreSQL</li>
+                            <li>Solidity</li>
+                            <li>Godot Game Engine</li>
+                            <li>Kotlin</li>
+                            <li>Design Patterns</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="row">
@@ -272,7 +302,7 @@
         </div>
         <!-- Portfolio Modals-->
         <!-- Portfolio Modal 1-->
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="portfolio-modal modal" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
@@ -322,7 +352,7 @@
             </div>
         </div>
         <!-- Portfolio Modal 2-->
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
+        <div class="portfolio-modal modal" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
@@ -369,7 +399,7 @@
             </div>
         </div>
         <!-- Portfolio Modal 3-->
-        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal3Label" aria-hidden="true">
+        <div class="portfolio-modal modal" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal3Label" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
@@ -416,7 +446,7 @@
             </div>
         </div>
         <!-- Portfolio Modal 4-->
-        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
+        <div class="portfolio-modal modal" id="portfolioModal4" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
@@ -450,7 +480,7 @@
             </div>
         </div>
         <!-- Portfolio Modal 5-->
-        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-labelledby="portfolioModal5Label" aria-hidden="true">
+        <div class="portfolio-modal modal" id="portfolioModal5" tabindex="-1" role="dialog" aria-labelledby="portfolioModal5Label" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
@@ -484,7 +514,7 @@
             </div>
         </div>
         <!-- Portfolio Modal 6-->
-        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-labelledby="portfolioModal6Label" aria-hidden="true">
+        <div class="portfolio-modal modal" id="portfolioModal6" tabindex="-1" role="dialog" aria-labelledby="portfolioModal6Label" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
