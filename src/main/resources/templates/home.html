@@ -39,7 +39,7 @@
         </nav>
 
         <!-- Masthead-->
-        <header class="masthead bg-black text-light text-right">
+        <header class="masthead bg-blue text-light text-right">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-3">
@@ -60,7 +60,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container" id="bouncy-arrow">
                     <a class="js-scroll-trigger" href="#projects">
                         <div class="arrow bounce" id="arrows">
                             <i class="fa fa-angle-double-down fa-2x"></i>
@@ -162,7 +162,7 @@
             </div>
         </section>
         <!-- Skills Section-->
-        <section class="page-section bg-guitar text-white mb-0" id="skills">
+        <section class="page-section bg-black text-white mb-0" id="skills">
             <div class="container">
                 <!-- About Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-white">Skills</h2>
@@ -173,9 +173,11 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- About Section Content-->
-                <div class="row swing">
-                    <div class="col-md-4 ml-auto flex-column offset-4">
-                        <button class="glow-on-hover" id="show-working-list" type="button">Working knowledge of ...</button>
+                <div class="row swing justify-content-around">
+                    <div class="col-sm-4">
+                        <div class="skill-btn skill-button" id="show-working-list">
+                            <span>Working knowledge of ...</span>
+                        </div>
                         <ul class="skill-list" id="working-knowledge-list">
                             <li>Java OOP</li>
                             <li>Spring Boot</li>
@@ -189,8 +191,10 @@
                             <li>MS Office</li>
                         </ul>
                     </div>
-                    <div class="col-md-4 ml-auto flex-column">
-                        <button class="glow-on-hover" id="show-basics-list" type="button">Basics of ...</button>
+                    <div class="col-sm-4">
+                        <div class="skill-btn skill-button" id="show-basics-list">
+                            <span>Basics of ...</span>
+                        </div>
                         <ul class="skill-list" id="basics-list">
                             <li>JavaScript</li>
                             <li>Python</li>
@@ -204,7 +208,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-8 offset-2 text-center mt-2">
+                    <div class="col-sm-12 text-center mt-2">
                         <span th:text="'More importantly: I have a willingness to learn anything and everything.'"></span>
                     </div>
                 </div>
