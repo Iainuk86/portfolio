@@ -89,11 +89,8 @@
                     $(this).animate({'opacity':'1'},1500);
 
                 }
-
             });
-
         });
-
     });
 
     $('#show-working-list').click(function() {
@@ -113,6 +110,13 @@
             }, i * 100);
         });
     })
+
+    $(".about-button").click(function() {
+        $('html,body').animate({
+                scrollTop: $("#about").offset().top - 100},
+            1000, "easeInOutExpo");
+        return false;
+    });
 
   })(jQuery); // End of use strict
   

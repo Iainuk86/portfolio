@@ -3,14 +3,12 @@
         xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Iain McIntosh - Portfolio</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" th:href="@{/assets/img/favicon.ico}" />
-        <!-- Font Awesome icons (free version)-->
-<!--        <script th:src="@{'https://use.fontawesome.com/releases/v5.15.1/js/all.js'}" crossorigin="anonymous"></script>-->
         <script th:src="@{/js/all.js}" crossorigin="anonymous"></script>
         <!-- Google fonts-->
         <link rel="preconnect" th:href="@{https://fonts.gstatic.com}">
@@ -26,26 +24,26 @@
                 <a class="navbar-brand js-scroll-trigger" href="#page-top">Iain McIntosh</a>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#projects">About</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                                                             th:href="@{https://www.github.com/Iainuk86}">Github</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded about-button">About</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#projects">Projects</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#skills">Skills</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" th:href="@{/viewcv}">View CV</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" th:href="@{/viewcv}">View CV</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                                                             th:href="@{https://www.github.com/Iainuk86}">Github</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
 
         <!-- Masthead-->
-        <header class="masthead bg-blue text-light text-right">
+        <header class="masthead bg-blue text-light">
             <div class="container">
-                <div class="row">
-                    <div class="col-sm-3">
+                <div class="row" id="masthead-items">
+                    <div class="col-lg-3 col-md-3 col-sm-12">
                         <img class="masthead-avatar align-self-start" id="iain-photo" th:src="@{/assets/img/photo.jpg}" />
                     </div>
-                    <div class="col-sm-9 align-self-end">
+                    <div class="col-lg-9 col-md-9 col-sm-12 align-self-end">
                         <div class="container">
                             <div class="animate one" id="iain">
                                 <span>I</span><span>A</span><span>I</span><span>N</span> &nbsp;
@@ -61,13 +59,50 @@
                     </div>
                 </div>
                 <div class="container" id="bouncy-arrow">
-                    <a class="js-scroll-trigger" href="#projects">
+                    <a class="about-button">
                         <div class="arrow bounce" id="arrows">
                             <i class="fa fa-angle-double-down fa-2x"></i>
                         </div>
                     </a>
                 </div>
             </div>
+            <br><br>
+            <section class="mt-auto" id="about">
+                <div class="container fade-on-scroll" id="about-me">
+                    <!-- About Section Heading-->
+                    <div class="fade-on-scroll">
+                        <h2 class="page-section-heading text-center text-uppercase text-white">About Me</h2>
+                        <!-- Icon Divider-->
+                        <div class="divider-custom divider-light">
+                            <div class="divider-custom-line"></div>
+                            <div class="divider-custom-icon"><i class="fas fa-terminal"></i></div>
+                            <div class="divider-custom-line"></div>
+                        </div>
+                    </div>
+                    <!-- About Me Text-->
+                    <div class="text-center">
+                        <div class="fade-on-scroll">
+                            <span th:text="'I travelled and worked around the world for ten years before getting tired of doing minimum-wage jobs.'"></span><br>
+                            <span th:text="'Sometimes it was necessary as I didn\'t speak the language, but nevertheless, I felt the need for more.'"></span><br><br>
+                        </div>
+                        <div class="fade-on-scroll">
+                            <span th:text="'Once I thought about my lifelong interest in computers and the way they worked, the easiest decision ever was made.'"></span><br>
+                            <span th:text="'I set about teaching myself how to code in my spare time and subsequently enrolled in Engineering at the Open University in the UK.'"></span><br>
+                            <span th:text="'Fast forward two years and I am vying to improve my code every day whilst also achieving an average grade of 95% in my degree.'"></span><br>
+                            <span th:text="'This is of course all whilst still working those minimum-wage jobs to fund all of this.'"></span><br><br>
+                        </div>
+                        <div class="fade-on-scroll">
+                            <span th:text="'When I\'m away from the screen, I have a thirst for life, new experiences and meeting new people.'"></span><br>
+                            <span th:text="'I play sport and music as much as I can, and try to learn as much as possible about the world and will never stop to do so.'"></span><br>
+                            <span th:text="'I intend to make myself the best version of me I can, and am determined to go far in the Tech Industry.'"></span><br><br>
+                        </div>
+                        <div class="fade-on-scroll">
+                            <span th:text="'I take advice and criticism well, so if you\'re a recruiter or a fellow developer, please don\'t hesitate'"></span><br>
+                            <span th:text="'to send me a message with any tips or resources I can use to improve this site or any of my projects.'"></span><br>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </header>
 
         <!-- Project Section-->
@@ -172,6 +207,9 @@
                     <div class="divider-custom-icon"><i class="fas fa-terminal"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
+                <div class="text-center mb-3">
+                    <span>Click to expand</span>
+                </div>
                 <!-- About Section Content-->
                 <div class="row swing justify-content-around">
                     <div class="col-sm-4">
@@ -208,13 +246,13 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12 text-center mt-2">
+                    <div class="col-sm-12 text-center mt-2 mb-2">
                         <span th:text="'More importantly: I have a willingness to learn anything and everything.'"></span>
                     </div>
                 </div>
                 <!-- About Section Button-->
-                <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" th:href="@{/downloadcv}">
+                <div class="text-center">
+                    <a class="btn btn-xl btn-outline-light mt-3" th:href="@{/downloadcv}">
                         <i class="fas fa-download mr-2"></i>
                         Download CV
                     </a>
@@ -225,12 +263,14 @@
         <section class="page-section" id="contact">
             <div class="container-fluid">
                 <!-- Contact Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-darker mb-0">Contact Me</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-terminal"></i></div>
-                    <div class="divider-custom-line"></div>
+                <div class="fade-on-scroll">
+                    <h2 class="page-section-heading text-center text-uppercase text-darker mb-0">Contact Me</h2>
+                    <!-- Icon Divider-->
+                    <div class="divider-custom">
+                        <div class="divider-custom-line"></div>
+                        <div class="divider-custom-icon"><i class="fas fa-terminal"></i></div>
+                        <div class="divider-custom-line"></div>
+                    </div>
                 </div>
                 <!-- Contact Section Form-->
                 <div class="row">
@@ -262,7 +302,7 @@
                             </div>
                             <br />
                             <div class="form-group">
-                                <input class="btn btn-primary btn-xl" type="submit" value="Send">
+                                <input class="btn btn-primary" type="submit" value="Send">
                             </div>
                         </form>
                     </div>
@@ -287,23 +327,31 @@
                     <!-- Footer Social Icons-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <h4 class="text-uppercase mb-4">Around the Web</h4>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-github"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" th:href="@{https://www.github.com/Iainuk86}"><i class="fab fa-github"></i></a>
                         <a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-fw fa-linkedin-in"></i></a>
                     </div>
                     <!-- Footer About Text-->
                     <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4">Something Else</h4>
+                        <h4 class="text-uppercase mb-4">About Iain McIntosh</h4>
                         <p class="lead mb-0">
-                            Something Something blah blah blah.
+                            <a class="about-button" href="#about">About Me</a>
+                        </p>
+                        <p class="lead mb-0">
+                            <a th:href="@{/viewcv}">View CV</a>
+                        </p>
+                        <p class="lead mb-0">
+                            <a th:href="@{/downloadcv}">Download CV</a>
                         </p>
                     </div>
                 </div>
             </div>
         </footer>
+
         <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
         <div class="scroll-to-top d-lg-none position-fixed">
             <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
         </div>
+
         <!-- Portfolio Modals-->
         <!-- Portfolio Modal 1-->
         <div class="portfolio-modal modal" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
@@ -335,14 +383,14 @@
                                     <div class="d-flex justify-content-center font-josefin">
                                         <div class="p-2">
                                             <a th:href="@{http://www.cocktailmate.net}">
-                                                <button class="btn btn-primary">
+                                                <button class="btn btn-modal">
                                                     <i class="fas fa-paper-plane fa-fw"></i>
                                                     Visit Website
                                                 </button>
                                             </a>
                                         </div>
                                         <div class="p-2">
-                                            <button class="btn btn-primary" data-dismiss="modal">
+                                            <button class="btn btn-modal" data-dismiss="modal">
                                                 <i class="fas fa-times fa-fw"></i>
                                                 Close Window
                                             </button>
@@ -382,14 +430,14 @@
                                     <div class="d-flex justify-content-center font-josefin">
                                         <div class="p-2">
                                             <a th:href="@{https://github.com/Iainuk86/customer-tracker}">
-                                                <button class="btn btn-primary">
+                                                <button class="btn btn-modal">
                                                     <i class="fas fa-paper-plane fa-fw"></i>
                                                     GitHub Repo
                                                 </button>
                                             </a>
                                         </div>
                                         <div class="p-2">
-                                            <button class="btn btn-primary" data-dismiss="modal">
+                                            <button class="btn btn-modal" data-dismiss="modal">
                                                 <i class="fas fa-times fa-fw"></i>
                                                 Close Window
                                             </button>
@@ -429,14 +477,14 @@
                                     <div class="d-flex justify-content-center font-josefin">
                                         <div class="p-2">
                                             <a th:href="@{https://github.com/Iainuk86/tide-calculator}">
-                                                <button class="btn btn-primary">
+                                                <button class="btn btn-modal">
                                                     <i class="fas fa-paper-plane fa-fw"></i>
                                                     GitHub Repo
                                                 </button>
                                             </a>
                                         </div>
                                         <div class="p-2">
-                                            <button class="btn btn-primary" data-dismiss="modal">
+                                            <button class="btn btn-modal" data-dismiss="modal">
                                                 <i class="fas fa-times fa-fw"></i>
                                                 Close Window
                                             </button>
@@ -472,7 +520,7 @@
                                     <img class="img-fluid rounded mb-5" th:src="@{/assets/img/blockchain.png}" alt="" />
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-5">Simple Bootstrap e-commerce website where users can buy goods using Cryptocurrency.<br>Uses Smart Contracts written in Solidity and ran on a local Blockchain using Truffle Ganache.</p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-modal" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -506,7 +554,7 @@
                                     <img class="img-fluid rounded mb-5" th:src="@{/assets/img/crypto.jpg}" alt="" />
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-5">An app that uses the CoinMarketCap Rest API to receive all of the latest Cryptocurrency prices, which are then ran through a self-implemented Bellman Ford algorithm.<br>If a negative cycle is detected by the algorithm, an opportunity for arbitrage is present. The result of exchanging $1,000 into the given currencies is then displayed to the user.</p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-modal" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -540,7 +588,7 @@
                                     <img class="img-fluid rounded mb-5" th:src="@{/assets/img/desert.png}" alt="" />
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-5">A simple 2D side scroller game where the main character has to avoid incoming enemies.<br>Highly responsive and fluid gameplay is a must and will be built with the Godot game engine.</p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-modal" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
