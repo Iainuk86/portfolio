@@ -1,15 +1,10 @@
-/*!
-    * Start Bootstrap - Freelancer v6.0.5 (https://startbootstrap.com/theme/freelancer)
-    * Copyright 2013-2020 Start Bootstrap
-    * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
-    */
-    (function($) {
+(function($) {
     "use strict"; // Start of use strict
-  
+
     // Smooth scrolling using jQuery easing
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
       if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-        var target = $(this.hash);
+        let target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
         if (target.length) {
           $('html, body').animate({
@@ -19,30 +14,19 @@
         }
       }
     });
-  
-    // Scroll to top button appear
+
+    // Make scroll-to-top button appear on small screens
     $(document).scroll(function() {
-      var scrollDistance = $(this).scrollTop();
+      let scrollDistance = $(this).scrollTop();
       if (scrollDistance > 100) {
         $('.scroll-to-top').fadeIn();
       } else {
         $('.scroll-to-top').fadeOut();
       }
     });
-  
-    // Closes responsive menu when a scroll trigger link is clicked
-    $('.js-scroll-trigger').click(function() {
-      $('.navbar-collapse').collapse('hide');
-    });
-  
-    // Activate scrollspy to add active class to navbar items on scroll
-    $('body').scrollspy({
-      target: '#mainNav',
-      offset: 80
-    });
-  
-    // Collapse Navbar
-    var navbarCollapse = function() {
+
+    // Shrink Navbar - Needs some tidying up
+    const navbarCollapse = function() {
       if ($("#mainNav").offset().top > 200) {
           $("#mainNav").removeClass("bg-transparent");
           $("#mainNav").addClass("navbar-shrink");
@@ -51,11 +35,12 @@
           $("#mainNav").addClass("bg-transparent");
       }
     };
+
     // Collapse now if page is not at top
     navbarCollapse();
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
-  
+
     // Floating label headings for the contact form
     $(function() {
       $("body").on("input propertychange", ".floating-label-form-group", function(e) {
@@ -67,32 +52,29 @@
       });
     });
 
+    // Fade in items in Masthead section
     $(document).ready(function() {
         $('#junior').hide().delay(1500).fadeIn(3000);
         $('#iain-photo').hide().fadeIn(2000);
     });
 
+    // Function to fade items when scrolling into view
     $(document).ready(function() {
 
-        /* Every time the window is scrolled ... */
         $(window).scroll( function(){
-
-            /* Check the location of each desired element */
             $('.fade-on-scroll').each( function(){
 
-                var top_of_object = $(this).position().top;
-                var bottom_of_window = $(window).scrollTop() + $(window).height();
+                let top_of_object = $(this).position().top;
+                let bottom_of_window = $(window).scrollTop() + $(window).height();
 
-                /* If the object is completely visible in the window, fade it it */
-                if( bottom_of_window > top_of_object + 130){
-
+                if(bottom_of_window > top_of_object + 130){
                     $(this).animate({'opacity':'1'},1500);
-
                 }
             });
         });
     });
 
+    // Reveals the 'Working Knowledge' list
     $('#show-working-list').click(function() {
 
         $('#working-knowledge-list li').each(function(i, el) {
@@ -102,6 +84,7 @@
         });
     });
 
+    // Reveals the 'Basics of' list
     $('#show-basics-list').click(function() {
 
         $('#basics-list li').each(function(i, el) {
@@ -111,6 +94,7 @@
         });
     })
 
+    // Scroll function specifically for the About section to account for margin
     $(".about-button").click(function() {
         $('html,body').animate({
                 scrollTop: $("#about").offset().top - 100},
@@ -118,5 +102,39 @@
         return false;
     });
 
-  })(jQuery); // End of use strict
-  
+    // Following four functions are for the modal menu on small screens. Closes modal and scrolls to anchor
+    $("#about-modal").click(function() {
+        $('#menuModal').modal('hide');
+        $('html, body').animate({
+            scrollTop: $("#about").offset().top - 100
+        }, 1000, "easeInOutExpo");
+        return false;
+    });
+
+    $("#projects-modal").click(function() {
+        $('#menuModal').modal('hide');
+        $('html, body').animate({
+            scrollTop: $("#projects").offset().top
+        }, 1000, "easeInOutExpo");
+        return false;
+    });
+
+    $("#skills-modal").click(function() {
+        $('#menuModal').modal('hide');
+        $('html, body').animate({
+            scrollTop: $("#skills").offset().top
+        }, 1000, "easeInOutExpo");
+        return false;
+    });
+
+    $("#contact-modal").click(function() {
+        $('#menuModal').modal('hide');
+        $('html, body').animate({
+            scrollTop: $("#contact").offset().top
+        }, 1000, "easeInOutExpo");
+        return false;
+    });
+
+})(jQuery); // End of use strict
+
+

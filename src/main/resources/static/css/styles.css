@@ -560,6 +560,10 @@ pre code {
   #masthead-items {
     text-align: center;
   }
+
+  #about-me {
+    margin: 0 2em;
+  }
 }
 
 @media (min-width: 576px) {
@@ -592,7 +596,11 @@ pre code {
     text-align: right;
   }
 
+  #mainNav {
+    font-size: 1rem;
+  }
 }
+
 @media (min-width: 1200px) {
   .container-xl, .container-lg, .container-md, .container-sm, .container {
     max-width: 1140px;
@@ -602,6 +610,7 @@ pre code {
     text-align: right;
   }
 }
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -4269,10 +4278,12 @@ input[type=button].btn-block {
 .navbar-expand .navbar-nav .dropdown-menu {
   position: absolute;
 }
+
 .navbar-expand .navbar-nav .nav-link {
   padding-right: 0.5rem;
   padding-left: 0.5rem;
 }
+
 .navbar-expand > .container,
 .navbar-expand > .container-fluid,
 .navbar-expand > .container-sm,
@@ -4287,82 +4298,6 @@ input[type=button].btn-block {
 }
 .navbar-expand .navbar-toggler {
   display: none;
-}
-
-.navbar-light .navbar-brand {
-  color: rgba(0, 0, 0, 0.9);
-}
-.navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
-  color: rgba(0, 0, 0, 0.9);
-}
-.navbar-light .navbar-nav .nav-link {
-  color: rgba(0, 0, 0, 0.5);
-}
-.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
-  color: rgba(0, 0, 0, 0.7);
-}
-.navbar-light .navbar-nav .nav-link.disabled {
-  color: rgba(0, 0, 0, 0.3);
-}
-.navbar-light .navbar-nav .show > .nav-link,
-.navbar-light .navbar-nav .active > .nav-link,
-.navbar-light .navbar-nav .nav-link.show,
-.navbar-light .navbar-nav .nav-link.active {
-  color: rgba(0, 0, 0, 0.9);
-}
-.navbar-light .navbar-toggler {
-  color: rgba(0, 0, 0, 0.5);
-  border-color: rgba(0, 0, 0, 0.1);
-}
-.navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-.navbar-light .navbar-text {
-  color: rgba(0, 0, 0, 0.5);
-}
-.navbar-light .navbar-text a {
-  color: rgba(0, 0, 0, 0.9);
-}
-.navbar-light .navbar-text a:hover, .navbar-light .navbar-text a:focus {
-  color: rgba(0, 0, 0, 0.9);
-}
-
-.navbar-dark .navbar-brand {
-  color: #fff;
-}
-.navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
-  color: #fff;
-}
-.navbar-dark .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.5);
-}
-.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
-  color: rgba(255, 255, 255, 0.75);
-}
-.navbar-dark .navbar-nav .nav-link.disabled {
-  color: rgba(255, 255, 255, 0.25);
-}
-.navbar-dark .navbar-nav .show > .nav-link,
-.navbar-dark .navbar-nav .active > .nav-link,
-.navbar-dark .navbar-nav .nav-link.show,
-.navbar-dark .navbar-nav .nav-link.active {
-  color: #fff;
-}
-.navbar-dark .navbar-toggler {
-  color: rgba(255, 255, 255, 0.5);
-  border-color: rgba(255, 255, 255, 0.1);
-}
-.navbar-dark .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-.navbar-dark .navbar-text {
-  color: rgba(255, 255, 255, 0.5);
-}
-.navbar-dark .navbar-text a {
-  color: #fff;
-}
-.navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
-  color: #fff;
 }
 
 .card {
@@ -5548,7 +5483,7 @@ a.close.disabled {
 .modal-body {
   position: relative;
   flex: 1 1 auto;
-  padding: 4rem 1rem;
+  padding: 2rem 0 1rem;
 }
 
 .modal-footer {
@@ -10166,11 +10101,57 @@ h3 {
   padding: 0.8rem;
 }
 
+#mainNav .icon {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  #mainNav {
+    transition: padding-top 0.5s, padding-bottom 0.5s, background-color 300ms linear;
+  }
+
+  .navbar-nav li.nav-item {
+    display: none;
+  }
+
+  #menuBurger {
+    color: #b8b9ba;
+    cursor: pointer;
+  }
+
+  #mainNav.navbar-shrink {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: #5e5e70;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+  #mainNav {
+    font-size: 1rem;
+    transition: padding-top 0.5s, padding-bottom 0.5s, background-color 300ms linear;
+  }
+
+  #mainNav .navbar-nav .nav-item {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+  #mainNav.navbar-shrink {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: #5e5e70;
+  }
+
+  #menuBurger {display: none;}
+}
+
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     transition: padding-top 0.5s, padding-bottom 0.5s, background-color 300ms linear;
+    font-size: 1.25rem;
   }
   #mainNav .navbar-brand {
     font-size: 1.75em;
@@ -10194,6 +10175,17 @@ h3 {
   #mainNav.navbar-shrink li.nav-item a.nav-link {
     color: #cecfde;
   }
+
+  #menuBurger {display: none;}
+}
+
+@media (min-width: 1200px) {
+  #mainNav {
+    font-size: 1.5rem;
+  }
+
+  #menuBurger {display: none;}
+
 }
 
 .masthead {
@@ -10523,8 +10515,8 @@ form .row:first-child .floating-label-form-group {
   border-bottom-width: 1px;
   border-top-style: solid;
   border-bottom-style: solid;
-  border-top-color: rgba(255,255,255,0.3);
-  border-bottom-color: rgba(255,255,255,0.3);
+  border-top-color: rgba(255,255,255,0.35);
+  border-bottom-color: rgba(255,255,255,0.35);
   transform: scale(0.1, 1);
 }
 .skill-button:hover span {
@@ -10543,7 +10535,7 @@ form .row:first-child .floating-label-form-group {
   height: 100%;
   z-index: 1;
   transition: all 0.3s;
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(255,255,255,0.2);
 }
 .skill-button:hover::after {
   opacity: 0;
@@ -10559,7 +10551,35 @@ form .row:first-child .floating-label-form-group {
   -webkit-border-radius:15px;
   border-radius:15px;
   background-color: rgba(105,100,100,0.4);
-  width: 100%;
+  width: 90%;
   margin: auto;
-  padding: 1em 0;
+  padding: 1em 1em;
+}
+
+#menuModal a {
+  font-size: 1.75em;
+  color: #4c4c5a;
+}
+
+#menuModal a:hover {
+  color: #1A6C77;
+}
+
+.divider
+{
+  position: relative;
+  margin-bottom: 0.5em;
+  height: 1px;
+}
+
+.div-transparent:before
+{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5%;
+  right: 5%;
+  width: 90%;
+  height: 1px;
+  background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
 }
