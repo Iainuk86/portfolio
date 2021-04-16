@@ -18,9 +18,8 @@ public class CVController {
     @RequestMapping(value="/viewcv")
     public ResponseEntity<InputStreamResource> viewCV() throws FileNotFoundException {
 
-        String filePath = "C:\\Users\\iainu\\IdeaProjects\\Portfolio\\src\\main\\resources\\";
         String fileName = "iain-mcintosh-cv.pdf";
-        File file = new File(filePath + fileName);
+        File file = new File(fileName);
         HttpHeaders headers = new HttpHeaders();
         headers.add("content-disposition", "inline;filename=" + fileName);
 
@@ -38,7 +37,7 @@ public class CVController {
 
         response.setContentType("text/html;charset=UTF-8");
         response.setHeader("Content-Disposition", "attachment; filename=\"iain-mcintosh-cv.pdf\"");
-        InputStream inputStream = new FileInputStream(new File("C:\\Users\\iainu\\IdeaProjects\\Portfolio\\src\\main\\resources\\iain-mcintosh-cv.pdf"));
+        InputStream inputStream = new FileInputStream(new File("iain-mcintosh-cv.pdf"));
 
         return outputStream -> {
             int nRead;

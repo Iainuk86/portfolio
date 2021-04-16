@@ -1,9 +1,14 @@
 package org.iainuk.portfolio.controller;
 
+import com.sendgrid.Method;
+import com.sendgrid.Request;
+import com.sendgrid.Response;
+import com.sendgrid.SendGrid;
+import com.sendgrid.helpers.mail.Mail;
+import com.sendgrid.helpers.mail.objects.Content;
+import com.sendgrid.helpers.mail.objects.Email;
 import org.iainuk.portfolio.entities.Contact;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.stereotype.Controller;
@@ -13,15 +18,14 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.mail.MessagingException;
-import javax.mail.internet.MimeMessage;
-import java.util.Date;
+import java.io.IOException;
 
 @Controller
 @EnableAsync
 public class ContactController {
 
     @Autowired
-    private JavaMailSender javaMailSender;
+    private SendGrid sendGrid;
 
     @GetMapping("/")
     public String redirect()
@@ -40,18 +44,24 @@ public class ContactController {
     @PostMapping("/home")
     public String sendForm(@ModelAttribute("contact") Contact contact) throws MessagingException
     {
-        String content = "Your Portfolio has a new message from: " + contact.getName();
-        content += "<br><br>Email address: " + contact.getEmail();
-        content += "<br><br>Message:<br>" + contact.getMessage();
+        Email from = new Email("iaindev86@gmail.com");
+        String subject = contact.getSubject();
+        Email to = new Email("iaindev86@gmail.com");
+        Content content = new Content("text/plain", "Your portfolio has a message from: " + contact.getName() + ".\nMessage: " + contact.getMessage());
+        Mail mail = new Mail(from, subject, to, content);
 
-        MimeMessage mimeMessage = javaMailSender.createMimeMessage();
-        MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage, true);
-
-        mimeMessageHelper.setTo("iaindev86@gmail.com");
-        mimeMessageHelper.setSubject(contact.getSubject());
-        mimeMessageHelper.setText(content, true);
-        mimeMessageHelper.setSentDate(new Date());
-        javaMailSender.send(mimeMessage);
+        Request request = new Request();
+        try {
+            request.setMethod(Method.POST);
+            request.setEndpoint("mail/send");
+            request.setBody(mail.build());
+            Response response = sendGrid.api(request);
+            System.out.println(response.getStatusCode());
+            System.out.println(response.getBody());
+            System.out.println(response.getHeaders());
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
 
         return "home";
     }
