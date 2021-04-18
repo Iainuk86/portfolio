@@ -16,34 +16,28 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.mail.MessagingException;
 import java.io.IOException;
 
 @Controller
 @EnableAsync
+@RequestMapping(value={"", "/", "/index"})
 public class ContactController {
 
     @Autowired
     private SendGrid sendGrid;
 
-    @GetMapping("/")
-    public String redirect()
-    {
-        return "redirect:/home";
-    }
-
-    @GetMapping("/home")
+    @GetMapping
     public String showContactForm(Model model)
     {
         model.addAttribute("contact", new Contact());
-        return "home";
+        return "index";
     }
 
     @Async
-    @PostMapping("/home")
-    public String sendForm(@ModelAttribute("contact") Contact contact) throws MessagingException
-    {
+    @PostMapping
+    public String sendForm(@ModelAttribute("contact") Contact contact) {
         Email from = new Email("iaindev86@gmail.com");
         String subject = contact.getSubject();
         Email to = new Email("iaindev86@gmail.com");
@@ -63,6 +57,6 @@ public class ContactController {
             ex.printStackTrace();
         }
 
-        return "home";
+        return "index";
     }
 }

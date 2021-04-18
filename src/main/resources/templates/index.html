@@ -29,8 +29,8 @@
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#projects">Projects</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#skills">Skills</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" th:href="@{/viewcv}">View CV</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" th:href="@{https://www.github.com/Iainuk86}">Github</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" th:href="@{/viewcv}" target="_blank">View CV</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" th:href="@{https://www.github.com/Iainuk86}" target="_blank">Github</a></li>
                     </ul>
                     <div data-toggle="modal" data-target="#menuModal" id="menuBurger">
                         <a><i class="fa fa-bars pt-1"></i></a>
@@ -287,7 +287,7 @@
                 <!-- Contact Section Form-->
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
-                        <form th:method="POST" th:action="@{/home}" th:object="${contact}" id="contactForm" name="contactForm" onsubmit="alert('Thank you for your message! I will get back to you ASAP.')">
+                        <form th:method="POST" th:action="@{/index}" th:object="${contact}" id="contactForm" name="contactForm" onsubmit="alert('Thank you for your message! I will get back to you ASAP.')">
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                                     <label for="name">Name</label>
@@ -340,8 +340,8 @@
                     <!-- Footer Around The Web-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <h4 class="text-uppercase mb-4">Around the Web</h4>
-                        <a class="btn btn-outline-light btn-social mx-1" th:href="@{https://www.github.com/Iainuk86}"><i class="fab fa-github"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" th:href="@{https://www.linkedin.com/in/iain-mcintosh-b6057420b}"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" th:href="@{https://www.github.com/Iainuk86}" target="_blank"><i class="fab fa-github"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" th:href="@{https://www.linkedin.com/in/iain-mcintosh-b6057420b}" target="_blank"><i class="fab fa-fw fa-linkedin-in"></i></a>
                     </div>
                     <!-- Footer About Me-->
                     <div class="col-lg-4">
@@ -350,7 +350,7 @@
                             <a class="about-button" href="#about">About Me</a>
                         </p>
                         <p class="lead mb-0">
-                            <a th:href="@{/viewcv}">View CV</a>
+                            <a th:href="@{/viewcv}" target="_blank">View CV</a>
                         </p>
                         <p class="lead mb-0">
                             <a th:href="@{/downloadcv}">Download CV</a>
@@ -395,10 +395,18 @@
                                     <p class="mb-4 font-josefin">More detailed information and future improvements can be found in the GitHub Readme file.</p>
                                     <div class="d-flex justify-content-center font-josefin">
                                         <div class="p-2">
-                                            <a th:href="@{http://www.cocktailmate.net}">
+                                            <a th:href="@{http://www.cocktailmate.net}" target="_blank">
                                                 <button class="btn btn-modal">
                                                     <i class="fas fa-paper-plane fa-fw"></i>
                                                     Visit Website
+                                                </button>
+                                            </a>
+                                        </div>
+                                        <div class="p-2">
+                                            <a th:href="@{https://github.com/Iainuk86/cocktail-mate}" target="_blank">
+                                                <button class="btn btn-modal">
+                                                    <i class="fas fa-paper-plane fa-fw"></i>
+                                                    Github Repo
                                                 </button>
                                             </a>
                                         </div>
@@ -442,7 +450,7 @@
                                     <p class="font-josefin mb-5">Another app built with Spring Boot, Thymeleaf and MySQL. The homepage displays all customers present in the database and supports full CRUD functionality to update the database in real time.<br><br>It will soon be enhanced with Spring Security to allow safe access to the database as well as to assign roles to each customer that will receive personalised newsletters based on their role.</p>
                                     <div class="d-flex justify-content-center font-josefin">
                                         <div class="p-2">
-                                            <a th:href="@{https://github.com/Iainuk86/customer-tracker}">
+                                            <a th:href="@{https://github.com/Iainuk86/customer-tracker}" target="_blank">
                                                 <button class="btn btn-modal">
                                                     <i class="fas fa-paper-plane fa-fw"></i>
                                                     GitHub Repo
@@ -489,7 +497,7 @@
                                     <p class="font-josefin mb-5">Simple app that communicates with three different Rest APIs. Firstly, it uses the Google Maps API to support auto-complete of the location.<br> Then this address is sent to the Map Quest API in order to retrieve the locations latitude and longitude coordinates.<br>Lastly, it sends these coordinates to the World Tides API and receives the tide height at the nearest Tide Station within 100km.</p>
                                     <div class="d-flex justify-content-center font-josefin">
                                         <div class="p-2">
-                                            <a th:href="@{https://github.com/Iainuk86/tide-calculator}">
+                                            <a th:href="@{https://github.com/Iainuk86/tide-calculator}" target="_blank">
                                                 <button class="btn btn-modal">
                                                     <i class="fas fa-paper-plane fa-fw"></i>
                                                     GitHub Repo
@@ -631,9 +639,9 @@
                             <div class="divider div-transparent"></div>
                             <a href="#contact" id="contact-modal">Contact</a>
                             <div class="divider div-transparent"></div>
-                            <a th:href="@{/viewcv}">View CV</a>
+                            <a th:href="@{/viewcv}" target="_blank">View CV</a>
                             <div class="divider div-transparent"></div>
-                            <a th:href="@{https/www.github.com/Iainuk86}">GitHub</a>
+                            <a th:href="@{https/www.github.com/Iainuk86}" target="_blank">GitHub</a>
                         </div>
                     </div>
                 </div>
