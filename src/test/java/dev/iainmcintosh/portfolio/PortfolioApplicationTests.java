@@ -1,4 +1,4 @@
-package org.iainuk.portfolio;
+package dev.iainmcintosh.portfolio;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package org.iainuk.portfolio;
+package dev.iainmcintosh.portfolio;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

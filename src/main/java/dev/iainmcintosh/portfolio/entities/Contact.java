@@ -1,4 +1,4 @@
-package org.iainuk.portfolio.entities;
+package dev.iainmcintosh.portfolio.entities;
 
 import lombok.Data;
 

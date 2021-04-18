@@ -1,4 +1,4 @@
-package org.iainuk.portfolio.controller;
+package dev.iainmcintosh.portfolio.controller;
 
 import com.sendgrid.Method;
 import com.sendgrid.Request;
@@ -7,7 +7,7 @@ import com.sendgrid.SendGrid;
 import com.sendgrid.helpers.mail.Mail;
 import com.sendgrid.helpers.mail.objects.Content;
 import com.sendgrid.helpers.mail.objects.Email;
-import org.iainuk.portfolio.entities.Contact;
+import dev.iainmcintosh.portfolio.entities.Contact;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.EnableAsync;

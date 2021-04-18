@@ -1,4 +1,4 @@
-package org.iainuk.portfolio.controller;
+package dev.iainmcintosh.portfolio.controller;
 
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpHeaders;
