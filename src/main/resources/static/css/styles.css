@@ -2527,12 +2527,26 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(60, 198, 171, 0.5);
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 479.98px) {
+
+  #portfolioModal1 .btn-modal {
+    font-size: 0.6em;
+  }
+
+  #portfolioModal5Label {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 575.98px) and (min-width: 480px) {
 
   #portfolioModal1 .btn-modal {
     font-size: 0.85em;
   }
 
+  #portfolioModal5Label {
+    font-size: 1.5em;
+  }
 }
 
 @media (max-width: 992px) and (min-width: 576px) {
@@ -2540,7 +2554,6 @@ fieldset:disabled a.btn {
   #portfolioModal1 .btn-modal {
     font-size: 0.95em;
   }
-
 }
 
 .btn-secondary {
